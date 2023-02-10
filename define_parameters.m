@@ -1,12 +1,12 @@
 function parameters = define_parameters()
 
     parameters = struct( ...
-      'a1', 380, ...  [mm]
-        'a2', 1040, ...  [mm]
-        'a3', 1191, ...  [mm]
+      'a1', 619, ...  [mm]
+        'a2', 870, ...  [mm]
+        'a3', 1016, ...  [mm]
         ...
         'd_1_min', 0, ...                   [mm]
-        'd_1_max', 1900, ...                [mm]
+        'd_1_max', 1500, ...                [mm]
         'theta_2_min', -deg2rad(90), ...    [rad]
         'theta_2_max', deg2rad(90), ...     [rad]
         'theta_3_min', -deg2rad(120), ...   [rad]
