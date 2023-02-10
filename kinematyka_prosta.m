@@ -1,34 +1,35 @@
 parameters = define_parameters();
 
-%% Zdefiniowanie punktu poczatkowego i koncowego
+%% Zdefiniowanie punktow poczatkowych i koncowych
 disp('Zdefiniuj punkt startowy w przestrzeni złaczy:');
+%% os przesuwna
 while true
-    prompt = ['d_1 startowe z zakresu [', num2str((parameters.d_1_min), 5), ', ', num2str((parameters.d_1_max), 5), '] [mm]:'];
+    prompt = ['d_1 startowe z zakresu [', num2str((parameters.d_1_min), 4), ': ', num2str((parameters.d_1_max), 4), '] [mm]:'];
     d_1_start = input(prompt);
     if ( (d_1_start >= parameters.d_1_min) && (d_1_start <= parameters.d_1_max) )
         break;
     else
-        warning('Wartość z poza zakresu dopuszczalnego!');
+        warning('Nie dopuszczalne wartości!');
     end
 end
- 
+%% druga os
 while true
-    prompt = ['theta_2 startowe z zakresu [', num2str(rad2deg(parameters.theta_2_min), 5), ', ', num2str(rad2deg(parameters.theta_2_max), 5), '] [deg]:'];
+    prompt = ['theta_2 startowe z zakresu [', num2str(rad2deg(parameters.theta_2_min), 4), ': ', num2str(rad2deg(parameters.theta_2_max), 4), '] [deg]:'];
     theta_2_start = deg2rad(input(prompt));
     if ( (theta_2_start >= parameters.theta_2_min) && (theta_2_start <= parameters.theta_2_max) )
         break;
     else
-        warning('Wartość z poza zakresu dopuszczalnego!');
+        warning('Nie dopuszczalne wartości!');
     end
 end
-
+%% trzecia os
 while true
-    prompt = ['theta_3 startowe z zakresu [', num2str(rad2deg(parameters.theta_3_min), 5), ', ', num2str(rad2deg(parameters.theta_3_max), 5), '] [deg]:'];
+    prompt = ['theta_3 startowe z zakresu [', num2str(rad2deg(parameters.theta_3_min), 4), ': ', num2str(rad2deg(parameters.theta_3_max), 4), '] [deg]:'];
     theta_3_start = deg2rad(input(prompt));
     if ( (theta_3_start >= parameters.theta_3_min) && (theta_3_start <= parameters.theta_3_max) )
         break;
     else
-        warning('Wartość z poza zakresu dopuszczalnego!');
+        warning('Nie dopuszczalne wartości!');
     end
 end
  
@@ -37,33 +38,37 @@ start_point.theta_2 = theta_2_start;
 start_point.theta_3 = theta_3_start;
 
 disp('Zdefiniuj punkt końcowy w przestrzeni złaczy:');
+
+%% os przesuwna
 while true
-    prompt = ['d_1 koniec z zakresu [', num2str((parameters.d_1_min), 5), ', ', num2str((parameters.d_1_max), 5), '] [mm]:'];
+    prompt = ['d_1 koniec z zakresu [', num2str((parameters.d_1_min), 4), ': ', num2str((parameters.d_1_max), 4), '] [mm]:'];
     d_1_end = input(prompt);
     if ( (d_1_end >= parameters.d_1_min) && (d_1_end <= parameters.d_1_max) )
         break;
     else
-        warning('Wartość z poza zakresu dopuszczalnego!');
+        warning('Nie dopuszczalne wartości!');
     end
 end
  
+%% druga os
 while true
-    prompt = ['theta_2 koniec z zakresu [', num2str(rad2deg(parameters.theta_2_min), 5), ', ', num2str(rad2deg(parameters.theta_2_max), 5), '] [deg]:'];
+    prompt = ['theta_2 koniec z zakresu [', num2str(rad2deg(parameters.theta_2_min), 4), ': ', num2str(rad2deg(parameters.theta_2_max), 4), '] [deg]:'];
     theta_2_end = deg2rad(input(prompt));
     if ( (theta_2_end >= parameters.theta_2_min) && (theta_2_end <= parameters.theta_2_max) )
         break;
     else
-        warning('Wartość z poza zakresu dopuszczalnego!');
+        warning('Nie dopuszczalne wartości!');
     end
 end
 
+%% trzecia os
 while true
-    prompt = ['theta_3 koniec z zakresu [', num2str(rad2deg(parameters.theta_3_min), 5), ', ', num2str(rad2deg(parameters.theta_3_max), 5), '] [deg]:'];
+    prompt = ['theta_3 koniec z zakresu [', num2str(rad2deg(parameters.theta_3_min), 4), ': ', num2str(rad2deg(parameters.theta_3_max), 4), '] [deg]:'];
     theta_3_end = deg2rad(input(prompt));
     if ( (theta_3_end >= parameters.theta_3_min) && (theta_3_end <= parameters.theta_3_max) )
         break;
     else
-        warning('Wartość z poza zakresu dopuszczalnego!');
+        warning('Nie dopuszczalne wartości!');
     end
 end
  
